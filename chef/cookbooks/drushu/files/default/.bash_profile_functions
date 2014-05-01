@@ -1,0 +1,52 @@
+# Author: Dan Shumaker
+
+
+addp() { 
+  #[[ -s $1 ]] && [[ grep -q $1 <<< $PATH]]; then
+  if [[ -s $1 ]] && [[ $PATH != *":$1:"* ]]; then
+    export PATH=$PATH:$1; 
+  fi
+}
+prep() { [[ -s $1 ]] && export PATH=$1:$PATH; }
+
+function ag() {
+  echo 
+  echo "-- ACTIVE -------------------------"
+  echo 
+  alias | grep -i -n $1;
+  echo 
+  echo "-- .bash_profile --------------------"
+  echo 
+  \grep "$1" ~/.bash_profile;
+  echo 
+}
+
+w2u() { 
+  cat $1 | tr "\015" "\n" > $1.new;  
+  mv $1.new $1; 
+}
+
+drupu() {  
+  echo "GRANT ALL PRIVILEGES ON $1.* TO '$2'@'localhost' IDENTIFIED BY '$3'" | mysql -u root -p$4; 
+}
+
+gssu() { 
+  cd ~/; 
+  git pull
+  cd ~/bin/; git checkout master; git pull;
+  cd ~/;
+}
+
+gitc() { 
+  git config --global branch.$1.remote origin; 
+  git config --global branch.$1.merge refs/heads/$1; 
+}
+
+gd() { 
+  git branch -D $1; 
+  git push origin :$1; 
+}
+
+my() { 
+  mysql --defaults-file=~/.my.$*; 
+}
