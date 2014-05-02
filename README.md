@@ -34,6 +34,9 @@ After it fails you can run this to fix it:
 ```Shell
 vagrant ssh -c "sudo ln -s /opt/VBoxGuestAdditions-4.3.10/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions"; 
 ```
+* reference: https://github.com/mitchellh/vagrant/issues/3341
+* reference: http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync/
+* reference: https://www.virtualbox.org/ticket/12879
 
 Then run this to proceed with the setup:
 
@@ -44,11 +47,11 @@ vagrant reload
 # Installations:
 
 * Ubuntu: 13.04.1
-* Apache:  2.2.22
-* Mysql: 5.5.34
-* PHP:   5.4.9
-* git: 1.8.1.2
-* stackcheck:   this just prints out what's installed.  It's my own little python script.
+* Apache: 2.2.22
+* Mysql:  5.5.34
+* PHP:  5.4.9
+* git:  1.8.1.2
+* stackcheck:   This just prints out what's installed.  It's my own little python script.
 * .bash_profile_*:   several bash profile dot files for my own comfy cozy homey feel.
 
 * Composer: -- the latest (5.1.2014 tested) 
