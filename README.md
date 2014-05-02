@@ -6,8 +6,8 @@ Vagrant files for drupal shu site
 
 # Requirements:
 
-* **Vagrant**:
-* **Vagrant Guest Additions**:4.3.10
+* **Vagrant**: 1.5.4
+* **Vagrant Guest Additions**:4.3.10  (it installs automatically as 4.2.10 and then auto updates .. see below)
 * **Chef**: 10.12.0
 
 # Start the machine with:
@@ -41,7 +41,7 @@ Then run this to proceed with the setup:
 vagrant reload
 ```
 
-# Installations
+# Installations:
 
 * Ubuntu: 13.04.1
 * Apache:  2.2.22
@@ -56,7 +56,8 @@ vagrant reload
 * Drushu-theme: My own simple (seven based) drupal theme.
 * Drushu-profile: A small collection of modules that I commonly use.
 
-The installation takes approximately 16 minutes depending on your internet download speed.
+# Installation Time:
+The installation takes approximately *16 minutes* depending on your internet download speed.
 
 You should be able to use the site at this url:
 
@@ -69,3 +70,7 @@ Or if you put the ip address in your host /etc/hosts file then you could use thi
 # Todo:  
 * Fix it so that we don't need the forwarded port.
 
+
+# Acknowledgements:
+* Many thanks to Emma Jane @ Drupalize.me who provided the required lamp_stack and damp_stack chef cookbooks and recipes.
+* http://drupalize.me/videos/introduction-configuration-management-vagrant
