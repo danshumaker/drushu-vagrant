@@ -1,1 +1,3 @@
 .*.swp
+shared-files/
+.vagrant/
