@@ -55,6 +55,7 @@ vagrant reload
 * .bash_profile_*:   several bash profile dot files for my own comfy cozy homey feel.
 
 * Composer: -- the latest (5.1.2014 tested) 
+* Drush: -- the latest (7.0-dev)
 * Drupal: -- the latest  (tested with Drupal 7.27 on 5/2/2014)
 * Drushu-theme: My own simple (seven based) drupal theme.
 * Drushu-profile: A small collection of modules that I commonly use.
@@ -72,6 +73,7 @@ Or if you put the ip address in your host /etc/hosts file then you could use thi
 
 # Todo:  
 * Fix it so that we don't need the forwarded port.
+* Try it with a 64bit ubuntu
 
 
 # Acknowledgements:
