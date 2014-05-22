@@ -19,9 +19,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network "forwarded_port", guest: 80, host: 4567
+  #config.vm.network "forwarded_port", guest: 80, host: 4567
   #
-  #config.vm.network "private_network", type:  "dhcp"
+  config.vm.network :private_network, type:  :dhcp
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -76,4 +76,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      # chef.add_recipe "recipe_name"
   
   end
+
+  config.vm.provision "shell", inline: "echo IP\ Address:\ `ip addr show dev eth1 scope global 2>&1 | grep inet | awk '{print $2}' | awk -F / '{print $1}'`"
 end
