@@ -1,3 +1,4 @@
 .*.swp
 shared-files/
 .vagrant/
+.DS_Store
