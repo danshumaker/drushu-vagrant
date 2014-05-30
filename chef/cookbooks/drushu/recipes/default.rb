@@ -144,7 +144,7 @@ when "debian", "ubuntu"
     user 'vagrant'
     group 'vagrant'
     cwd node['drushu']['site-dir']
-    command "drush make ../drushu.make -y"
+    command "drush make ../drushu.make --no-cache --force-complete -y"
     only_if { File.exists?("/var/www/drushu.make") }
     not_if { File.exists?("#{node['drushu']['site-dir']}/.htaccess") }
   end
